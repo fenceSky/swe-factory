@@ -36,10 +36,10 @@ ENV PYTHONPATH=.:$PYTHONPATH
 
 # install miniconda
 WORKDIR $CONDA_ROOT
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && \
-    bash miniconda.sh -b -u -p . && rm -f miniconda.sh && \
-    conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main && \
-    conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+# RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && \
+#     bash miniconda.sh -b -u -p . && rm -f miniconda.sh && \
+#     conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main && \
+#     conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 
 # install python
 RUN conda create --name $SWE_ENV_NAME 'python==3.12.5' -y
