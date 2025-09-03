@@ -42,9 +42,9 @@ WORKDIR $CONDA_ROOT
 #     conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 
 # install python
-RUN conda create --name $SWE_ENV_NAME 'python==3.12.5' -y
+# RUN conda create --name $SWE_ENV_NAME 'python==3.12.5' -y
 
 # install swe-factory
-COPY . $SWE_ROOT
-WORKDIR $SWE_ROOT
-RUN pip install -r requirements.txt
+# COPY . $SWE_ROOT
+# WORKDIR $SWE_ROOT
+# RUN pip install -r requirements.txt
