@@ -31,8 +31,8 @@ ENV PATH=$CONDA_ROOT/envs/$SWE_ENV_NAME/bin:$CONDA_ROOT/bin:$PATH
 ENV PYTHONPATH=.:$PYTHONPATH
 
 # prepare system
-RUN yum install -y gcc gcc-c++ procps-ng tzdata wget which unzip tree git && \
-    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+# RUN yum install -y gcc gcc-c++ procps-ng tzdata wget which unzip tree git && \
+#     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # install miniconda
 WORKDIR $CONDA_ROOT
